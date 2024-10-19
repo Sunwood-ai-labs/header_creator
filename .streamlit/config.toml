@@ -1,0 +1,26 @@
+[theme]
+# Background color
+backgroundColor = "#F5F5F5"  # 薄いグレー（オフホワイト）
+
+# Primary accent color
+primaryColor = "#0511F2"
+
+# Secondary background color
+secondaryBackgroundColor = "#E8E8E8"  # やや濃いめのグレー
+
+# Text color
+textColor = "#4478A6"
+
+# Font
+font = "sans serif"
+
+[theme.button]
+backgroundColor = "#1675F2"
+textColor = "#FFFFFF"
+
+[theme.sidebar]
+backgroundColor = "#BA9CD9"
+textColor = "#000000"
+
+[theme.slider]
+color = "#5FD9D9"
