@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 from header_creator import create_header
+import base64
 
 # ページ設定
 st.set_page_config(
@@ -9,38 +10,45 @@ st.set_page_config(
     layout="wide"
 )
 
+def get_image_download_link(img_path, filename):
+    with open(img_path, "rb") as file:
+        btn = st.download_button(
+            label="Download Image",
+            data=file,
+            file_name=filename,
+            mime="image/png"
+        )
+
 def main():
     st.markdown("""
-
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/header_creator/refs/heads/main/docs/header-creator.png" alt="Header Creator Logo">
+    <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/header_creator/refs/heads/main/docs/header-creator.png" alt="Header Creator Logo", width=50%>
 
 # Header Creator
 
 <p align="center">
-  <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
-  <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
-  <a href="https://github.com/Sunwood-ai-labs/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header-creator.svg" alt="License"></a>
-  <a href="https://github.com/Sunwood-ai-labs/header-creator"><img src="https://img.shields.io/github/stars/Sunwood-ai-labs/header-creator.svg?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/Sunwood-ai-labs/header-creator/issues"><img src="https://img.shields.io/github/issues/Sunwood-ai-labs/header-creator.svg" alt="GitHub issues"></a>
+    <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
+    <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
+    <a href="https://github.com/Sunwood-ai-labs/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header-creator.svg" alt="License"></a>
+    <a href="https://github.com/Sunwood-ai-labs/header-creator"><img src="https://img.shields.io/github/stars/Sunwood-ai-labs/header-creator.svg?style=social" alt="GitHub stars"></a>
+    <a href="https://github.com/Sunwood-ai-labs/header-creator/issues"><img src="https://img.shields.io/github/issues/Sunwood-ai-labs/header-creator.svg" alt="GitHub issues"></a>
 </p>
 
 <p align="center">
-  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.1.1 がリリースされました。</b>
+    <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.1.1 がリリースされました。</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Click-000000?style=for-the-badge&logo=python&logoColor=white" alt="Click">
-  <img src="https://img.shields.io/badge/Requests-2CA5E0?style=for-the-badge&logo=python&logoColor=white" alt="Requests">
-  <img src="https://img.shields.io/badge/Loguru-000000?style=for-the-badge&logo=python&logoColor=white" alt="Loguru">
-  <img src="https://img.shields.io/badge/Ideogram-FF6B6B?style=for-the-badge&logo=image&logoColor=white" alt="Ideogram">
-  <img src="https://img.shields.io/badge/pic--to--header-4B0082?style=for-the-badge&logo=image&logoColor=white" alt="pic-to-header">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/Click-000000?style=for-the-badge&logo=python&logoColor=white" alt="Click">
+    <img src="https://img.shields.io/badge/Requests-2CA5E0?style=for-the-badge&logo=python&logoColor=white" alt="Requests">
+    <img src="https://img.shields.io/badge/Loguru-000000?style=for-the-badge&logo=python&logoColor=white" alt="Loguru">
+    <img src="https://img.shields.io/badge/Ideogram-FF6B6B?style=for-the-badge&logo=image&logoColor=white" alt="Ideogram">
+    <img src="https://img.shields.io/badge/pic--to--header-4B0082?style=for-the-badge&logo=image&logoColor=white" alt="pic-to-header">
 </p>
 
 </div>
-
-                """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
     # API Key input (password field for masking)
     api_key = st.text_input("API Key", type="password")
@@ -70,38 +78,40 @@ Ensure that the "Header Creator" text is the largest and most prominent element 
 
     if st.button("Generate Header"):
         if api_key and mask_image:
-            # Save uploaded mask image temporarily
-            mask_image_path = "temp_mask.png"
-            with open(mask_image_path, "wb") as f:
-                f.write(mask_image.getvalue())
+            with st.spinner('Generating header image...'):
+                # Save uploaded mask image temporarily
+                mask_image_path = "temp_mask.png"
+                with open(mask_image_path, "wb") as f:
+                    f.write(mask_image.getvalue())
 
-            # Set paths for input and output images
-            input_image_path = "temp_input.png"
-            output_image_path = "output.png"
+                # Set paths for input and output images
+                input_image_path = "temp_input.png"
+                output_image_path = "output.png"
 
-            # Call create_header function
-            result = create_header(
-                prompt=prompt,
-                input_image_path=input_image_path,
-                mask_image_path=mask_image_path,
-                output_image_path=output_image_path,
-                api_key=api_key,
-                model=model,
-                magic_prompt=magic_prompt,
-                aspect_ratio=aspect_ratio,
-                style_type=style_type
-            )
+                # Call create_header function
+                result = create_header(
+                    prompt=prompt,
+                    input_image_path=input_image_path,
+                    mask_image_path=mask_image_path,
+                    output_image_path=output_image_path,
+                    api_key=api_key,
+                    model=model,
+                    magic_prompt=magic_prompt,
+                    aspect_ratio=aspect_ratio,
+                    style_type=style_type
+                )
 
-            if result:
-                st.success(f"Header image generated: {result}")
-                st.image(output_image_path)
-            else:
-                st.error("Failed to generate header image")
+                if result:
+                    st.success(f"Header image generated: {result}")
+                    st.image(output_image_path)
+                    get_image_download_link(output_image_path, "header_image.png")
+                else:
+                    st.error("Failed to generate header image")
 
-            # Clean up temporary files
-            os.remove(mask_image_path)
-            if os.path.exists(input_image_path):
-                os.remove(input_image_path)
+                # Clean up temporary files
+                os.remove(mask_image_path)
+                if os.path.exists(input_image_path):
+                    os.remove(input_image_path)
         else:
             if not api_key:
                 st.warning("Please enter your API Key")
