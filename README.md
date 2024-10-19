@@ -1,3 +1,15 @@
+---
+title: Header Creator
+emoji: 🦀
+colorFrom: purple
+colorTo: yellow
+sdk: streamlit
+sdk_version: 1.39.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 <div align="center">
   <img src="https://via.placeholder.com/600x200.png?text=Header+Creator" alt="Header Creator Logo">
 
