@@ -11,7 +11,7 @@ license: mit
 ---
 
 <div align="center">
-  <img src="docs/header-creator.png" alt="Header Creator Logo">
+  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/header_creator/refs/heads/main/docs/header-creator.png" alt="Header Creator Logo">
 
 # Header Creator
 
