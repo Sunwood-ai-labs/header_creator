@@ -24,7 +24,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.0 has been released.</b>
+  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.2 has been released.</b>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ license: mit
 
 ## 🚀 Project Overview
 
-Header Creator is a Python package that generates header images using the Ideogram API. It's usable from both a command-line interface (CLI) and a Streamlit app. Version 0.2.0 adds a user interface via a Streamlit app.
+Header Creator is a Python package that generates header images using the Ideogram API. It can be used from both a command-line interface (CLI) and a Streamlit app. Version 0.2.2 adds theme settings to the Streamlit app and improves UI/UX.
 
 
 ## ✨ Key Features
@@ -49,11 +49,14 @@ Header Creator is a Python package that generates header images using the Ideogr
 - Usable from both a command-line interface (CLI) and a Streamlit app
 - Customization via a configuration file (`config.py`)
 - API key management, prompt input, mask image upload, and parameter settings via the Streamlit app
+- Header image download function (from v0.2.2)
+- Spinner display during generation process (from v0.2.2)
 
 
 ## 🔧 Usage
 
-You can easily generate header images via a GUI using the Streamlit app.  See the Streamlit app for details.
+You can easily generate header images via a GUI using the Streamlit app. Run `app.py` to start the Streamlit app.
+
 
 ### Using from a Python script
 
@@ -71,7 +74,7 @@ result = create_header(
 if result:
     print(f"Header image generated: {result}")
 else:
-    print("Header image generation failed")
+    print("Failed to generate header image")
 ```
 
 ### Using from the command line
@@ -94,12 +97,16 @@ pip install header-creator
 
 ## ⚙️ Configuration
 
-You can modify the following default settings in the `config.py` file:
+You can change the following default settings in the `config.py` file:
 
 - `DEFAULT_MODEL`: The Ideogram model to use (default: `V_2_TURBO`)
 - `DEFAULT_MAGIC_PROMPT`: Magic prompt option (default: `ON`)
 - `DEFAULT_ASPECT_RATIO`: Aspect ratio of the generated image (default: `ASPECT_16_9`)
 - `DEFAULT_STYLE_TYPE`: Style type of the generated image (default: `RENDER_3D`)
+
+## 🆕 What's New
+
+- **v0.2.2:** Added theme settings to the Streamlit app, improved UI/UX, added header image download function, added spinner display during generation process.
 
 
 ## 📄 License

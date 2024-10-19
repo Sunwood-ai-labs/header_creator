@@ -24,7 +24,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.2.0 がリリースされました。</b>
+  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.2.2 がリリースされました。</b>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ license: mit
 
 ## 🚀 プロジェクト概要
 
-Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とStreamlitアプリの両方から利用可能です。  バージョン 0.2.0では、Streamlitアプリによるユーザーインターフェースが追加されました。
+Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とStreamlitアプリの両方から利用可能です。  バージョン 0.2.2では、Streamlitアプリのテーマ設定を追加し、UI/UXを向上させました。
 
 
 ## ✨ 主な機能
@@ -49,11 +49,14 @@ Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPyt
 - コマンドラインインターフェース (CLI) とStreamlitアプリからの利用
 - 設定ファイル(`config.py`)によるカスタマイズ
 - StreamlitアプリによるAPIキー管理、プロンプト入力、マスク画像アップロード、パラメータ設定
+- ヘッダー画像のダウンロード機能 (v0.2.2から)
+- 生成処理中のスピナー表示 (v0.2.2から)
 
 
 ## 🔧 使用方法
 
-Streamlitアプリを使用することで、GUIから簡単にヘッダー画像を生成できます。詳細はStreamlitアプリをご確認ください。
+Streamlitアプリを使用することで、GUIから簡単にヘッダー画像を生成できます。`app.py` を実行してStreamlitアプリを起動してください。
+
 
 ### Python スクリプトから使用する場合
 
@@ -89,7 +92,7 @@ header-creator --prompt "A stunning tropical paradise header image" --input path
 pip install header-creator
 ```
 
-2. `.env` ファイルを作成し、`IDEOGRAM_API_KEY` にIdeogram APIキーを設定します (`.env.example`を参照)。
+2.  `.env` ファイルを作成し、`IDEOGRAM_API_KEY` にIdeogram APIキーを設定します (`.env.example`を参照)。
 
 
 ## ⚙️ 設定
@@ -100,6 +103,10 @@ pip install header-creator
 - `DEFAULT_MAGIC_PROMPT`: マジックプロンプトオプション (デフォルト: `ON`)
 - `DEFAULT_ASPECT_RATIO`: 生成する画像のアスペクト比 (デフォルト: `ASPECT_16_9`)
 - `DEFAULT_STYLE_TYPE`: 生成する画像のスタイルタイプ (デフォルト: `RENDER_3D`)
+
+## 🆕 最新情報
+
+- **v0.2.2:** Streamlitアプリのテーマ設定を追加、UI/UX向上、ヘッダー画像のダウンロード機能追加、生成処理中のスピナー表示追加。
 
 
 ## 📄 ライセンス
