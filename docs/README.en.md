@@ -24,7 +24,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.0 has been released.</b>
+  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.1 has been released.</b>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ license: mit
 
 ## 🚀 Project Overview
 
-Header Creator is a Python package that generates header images using the Ideogram API. It's usable from both a command-line interface (CLI) and a Streamlit app. Version 0.2.0 adds a user interface via a Streamlit app.
+Header Creator is a Python package that generates header images using the Ideogram API. It's usable from both a command-line interface (CLI) and a Streamlit app.  Version 0.2.1 adds a Streamlit app user interface and changes the repository name from "HarmonAI III" to "Header Creator".
 
 
 ## ✨ Key Features
@@ -53,9 +53,10 @@ Header Creator is a Python package that generates header images using the Ideogr
 
 ## 🔧 Usage
 
-You can easily generate header images via a GUI using the Streamlit app.  See the Streamlit app for details.
+The Streamlit app provides an easy-to-use GUI for generating header images. Run `app.py` to start the Streamlit app.
 
-### Using from a Python script
+
+### Using from a Python script:
 
 ```python
 from header_creator import create_header
@@ -74,7 +75,7 @@ else:
     print("Header image generation failed")
 ```
 
-### Using from the command line
+### Using from the command line:
 
 ```bash
 header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png --api-key YOUR_API_KEY # or environment variable IDEOGRAM_API_KEY
@@ -94,7 +95,7 @@ pip install header-creator
 
 ## ⚙️ Configuration
 
-You can modify the following default settings in the `config.py` file:
+The following default settings can be changed in the `config.py` file:
 
 - `DEFAULT_MODEL`: The Ideogram model to use (default: `V_2_TURBO`)
 - `DEFAULT_MAGIC_PROMPT`: Magic prompt option (default: `ON`)
@@ -108,8 +109,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🤝 Contributing
 
-Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss changes before making large modifications.
+Bug reports, feature requests, and pull requests are welcome. Please open an issue to discuss changes before making large modifications.
 
 ## 🙏 Acknowledgements
 
-This project uses the [Ideogram API](https://ideogram.ai/).  Thanks to iris-s-coon and Maki.
+This project uses the [Ideogram API](https://ideogram.ai/). Thanks to iris-s-coon and Maki.
