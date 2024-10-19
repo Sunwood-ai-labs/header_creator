@@ -1,0 +1,10 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+IDEOGRAM_API_KEY = os.getenv("IDEOGRAM_API_KEY")
+DEFAULT_MODEL = "V_2_TURBO"
+DEFAULT_MAGIC_PROMPT = "ON"
+DEFAULT_ASPECT_RATIO = "ASPECT_16_9"
+DEFAULT_STYLE_TYPE = "RENDER_3D"

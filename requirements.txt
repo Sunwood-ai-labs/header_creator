@@ -1,2 +1,7 @@
 aira
 sourcesage
+requests
+python-dotenv
+loguru
+click
+pic-to-header
