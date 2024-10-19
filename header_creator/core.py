@@ -5,11 +5,13 @@ from loguru import logger
 from .image_generator import generate_image
 from .header_processor import process_header_image
 
-def create_header(prompt, input_image_path, mask_image_path, output_image_path):
+def create_header(prompt, input_image_path, mask_image_path, output_image_path,
+                  model=None, magic_prompt=None, aspect_ratio=None, style_type=None):
     logger.info("ヘッダー画像生成プロセスを開始します")
 
     # Ideogram APIを使用して画像を生成
-    result = generate_image(prompt)
+    result = generate_image(prompt, model=model, magic_prompt_option=magic_prompt,
+                            aspect_ratio=aspect_ratio, style_type=style_type)
 
     if result:
         logger.info("生成された画像の情報:")
