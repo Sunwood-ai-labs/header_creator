@@ -18,11 +18,11 @@ license: mit
 <p align="center">
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
-  <a href="https://github.com/Sunwood-ai-labs/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header-creator.svg" alt="License"></a>
+  <a href="https://github.com/Sunwood-ai-labs/header_creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header_creator.svg" alt="License"></a>
 </p>
 
 <p align="center">
-  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.1.0 がリリースされました。</b>
+  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.1.1 がリリースされました。</b>
 </p>
 
 <p align="center">
@@ -37,7 +37,7 @@ license: mit
 
 ## 🚀 プロジェクト概要
 
-Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とPythonスクリプトからの両方で利用可能です。
+Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とPythonスクリプトからの両方で利用可能です。バージョン 0.1.1では、READMEファイルのロゴ画像パスを絶対パスに変更し、READMEファイルの英語と日本語バージョンを更新しました。これにより、GitHub Pagesなどからの表示が改善されます。
 
 
 ## ✨ 主な機能
