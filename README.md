@@ -1,53 +1,51 @@
+<div align="center">
+  <img src="https://via.placeholder.com/600x200.png?text=Header+Creator" alt="Header Creator Logo">
+
+# Header Creator
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/HarmonAI_III/refs/heads/main/docs/HarmonAI-III.png" width="100%">
-  <h1 align="center">🌟 HarmonAI III 🌟</h1>
+  <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
+  <a href="https://github.com/yourusername/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yourusername/header-creator.svg" alt="License"></a>
 </p>
 
-<!-- 既存のバッジ情報は省略 -->
+<p align="center">
+  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。</b>
+</p>
 
-<h2 align="center">
-  ～ AI-Powered Automated Repository Management Template ～
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Click-000000?style=for-the-badge&logo=python&logoColor=white" alt="Click">
+  <img src="https://img.shields.io/badge/Requests-2CA5E0?style=for-the-badge&logo=python&logoColor=white" alt="Requests">
+  <img src="https://img.shields.io/badge/Loguru-000000?style=for-the-badge&logo=python&logoColor=white" alt="Loguru">
+  <img src="https://img.shields.io/badge/Ideogram-FF6B6B?style=for-the-badge&logo=image&logoColor=white" alt="Ideogram">
+</p>
 
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/blob/main/README.md"><img src="https://img.shields.io/badge/ドキュメント-日本語-white.svg" alt="JA doc"/></a>
-  <a href="https://github.com/Sunwood-ai-labs/HarmonAI_III/blob/main/docs/README.en.md"><img src="https://img.shields.io/badge/english-document-white.svg" alt="EN doc"></a>
-</h2>
+</div>
 
-> [!IMPORTANT]
->  HarmonAI IIIは、[cline (旧:Claude Dev)](https://github.com/clinebot/cline), [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage), [claude.ai](https://claude.ai/)を活用して開発されたテンプレートリポジトリです。リリースノート、README、コミットメッセージの大部分は、最新のAI技術を用いて生成されています。
+## 🚀 機能
 
-## 🚀 プロジェクト概要
+- Ideogram API を使用した画像生成
+- 生成された画像の処理と保存
+- コマンドラインインターフェース (CLI) のサポート
 
-HarmonAI IIIは、AIRAとIRISを統合した革新的な**AIリポジトリスターターキット**です。このリポジトリは、LLMを活用したAI開発プロジェクトの構造とワークフローを提供し、開発者の作業効率を劇的に向上させることを目的としています。バージョン: `v1.2.0`
+## 📦 インストール
 
-## 🆕 最新情報
+1. PyPI からインストールします：
 
-- 🎉 v1.2.0リリース: READMEへのGitHub Shieldsの追加、コラボレーター招待機能の追加、ドキュメントの更新を行いました。
-- 🚀 header_creator パッケージの追加: Ideogram APIを使用してヘッダー画像を生成し、処理するための新機能が追加されました。
-
-## ✨ 主な機能
-
-1. **統合AIツールセット**: AIRAとIRISの機能を1つのパッケージで提供
-2. **即時利用可能**: テンプレートとして使用することで、高品質な初期構造を持つリポジトリを簡単に作成
-3. **自動化された開発ワークフロー**: コミットメッセージ生成、リリースノート作成、イシュー管理の自動化
-4. **多言語サポート**: READMEの自動翻訳機能により、国際的なプロジェクト展開をサポート
-5. **柔軟なカスタマイズ**: プロジェクトのニーズに合わせて容易に調整可能
-6. **コラボレーター自動招待**: GitHub APIを利用したコラボレーター招待スクリプト
-7. **ヘッダー画像生成**: Ideogram APIを使用したヘッダー画像の自動生成と処理
-
-## 🔧 使用方法
-
-### AIRAの使用例：
 ```bash
-aira --mode sourcesage commit  --config=.aira\config.dev.commit.yml --ss-model-name="gpt-4o-mini" --llm-output="llm_output.md"
+pip install header-creator
 ```
 
-### IRISの使用例：
+2. `.env` ファイルを作成し、Ideogram API キーを設定します：
 
-詳細な使用方法については、各コンポーネントのドキュメンテーションを参照してください。
+```
+IDEOGRAM_API_KEY=your_ideogram_api_key_here
+```
 
-### header_creatorの使用例：
+## 🛠 使用方法
 
-Pythonスクリプトから使用する場合：
+### Python スクリプトから使用する場合
 
 ```python
 from header_creator import create_header
@@ -65,138 +63,58 @@ else:
     print("ヘッダー画像の生成に失敗しました")
 ```
 
-コマンドラインから使用する場合：
+### コマンドラインから使用する場合
 
 ```bash
-python -m header_creator.cli --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png
+header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png
 ```
 
-## 📦 インストール手順
+## ⚙️ 設定
 
-1. このリポジトリをテンプレートとして使用し、新しいリポジトリを作成します。
-2. リポジトリをローカルにクローンします。
-3. 必要な依存関係をインストールします：
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. AIRAとIRISの設定ファイルをカスタマイズします。
-5. GitHub Actionsの設定を確認し、必要に応じて環境変数を設定します。
-6. `.github/release_notes/.sourcesage_releasenotes_iris.yml`ファイルを開き、`repo-name:`の値を新しいリポジトリ名に修正します。
-7. `.env`ファイルを作成し、必要なAPIキーを設定します：
-   ```
-   IDEOGRAM_API_KEY=your_ideogram_api_key_here
-   ```
+`config.py` ファイルで以下のデフォルト設定を変更できます：
 
-## 🌿 環境構築
+- `DEFAULT_MODEL`: 使用する Ideogram モデル
+- `DEFAULT_MAGIC_PROMPT`: マジックプロンプトオプション
+- `DEFAULT_ASPECT_RATIO`: 生成する画像のアスペクト比
+- `DEFAULT_STYLE_TYPE`: 生成する画像のスタイルタイプ
 
-HarmonAI IIIの環境を構築するには、以下の手順に従ってください：
+## 👨‍💻 開発
 
-1. 仮想環境を作成します：
-   ```bash
-   python3 -m venv .venv
-   ```
-   これにより、`.venv`ディレクトリに仮想環境が作成されます。
+1. このリポジトリをクローンします：
 
-2. 仮想環境をアクティベートします：
-   ```bash
-   source .venv/bin/activate  # Linux/macOS
-   .venv\Scripts\activate  # Windows
-   ```
-
-3. 依存関係をインストールします：
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-これらの手順により、HarmonAI IIIの開発環境が整います。
-
-## 📚 主要コンポーネント
-
-### 🤖 [AIRA (AI-Integrated Repository for Accelerated Development)](https://github.com/Sunwood-ai-labs/AIRA)
-- リポジトリ作成の自動化
-- コミットメッセージの自動生成
-
-### 🌈 [IRIS (Intelligent Repository Issue Solver)](https://github.com/Sunwood-ai-labs/IRIS)
-- イシューの自動分類
-- 解決策の自動提案
-- リリースノートの自動生成
-- READMEの自動翻訳
-
-### 🖼️ header_creator
-- Ideogram APIを使用したヘッダー画像の生成
-- 生成された画像の処理と保存
-
-## 🤝 コラボレーターの自動招待
-
-HarmonAI IIIには、GitHubリポジトリにコラボレーターを自動で招待するスクリプトが含まれています。以下の手順で使用できます：
-
-1. `.env` ファイルを作成し、必要なトークンを設定します：
-   ```
-   # GitHubアクセストークン（コラボレーター招待用）
-   GITHUB_TOKEN=your_github_personal_access_token_here
-
-   # Ideogram APIキー
-   IDEOGRAM_API_KEY=your_ideogram_api_key_here
-
-   # 以下は他の機能で使用する可能性のあるトークンの例です。記載しておくと後々便利です。
-   # GITHUB_ACCESS_TOKEN=ghp_xxxxx
-   # YOUR_PERSONAL_ACCESS_TOKEN_IRIS=ghp_yyyyy
-   # GEMINI_API_KEY=AIzzzzz
-   ```
-
-   注意: `.env` ファイルは `.gitignore` に含めて、リポジトリにコミットしないようにしてください。
-
-2. 以下のコマンドを実行してコラボレーターを招待します：
-   ```bash
-   python .github/github_add_collaborator.py Sunwood-ai-labs/HarmonAI_III username_to_invite
-   ```
-
-   `username_to_invite` は招待したいGitHubユーザー名に置き換えてください。
-
-3. スクリプトが正常に実行されると、指定したユーザーにコラボレーター招待が送信されます。
-
-注意事項：
-- このスクリプトを使用するには、GitHubトークンに適切な権限（`repo` スコープ）が必要です。
-- 組織のリポジトリに対して使用する場合は、組織の設定で適切な権限が付与されていることを確認してください。
-- セキュリティのため、トークンは定期的に更新し、必要最小限の権限のみを付与するようにしてください。
-- `.env` ファイルやトークンを含む情報は、決して公開リポジトリにコミットしないでください。
-
-この機能により、プロジェクトへの新しいコントリビューターの追加プロセスが簡素化されます。セキュリティを維持しながら、効率的にチームを拡大することができます。
-
-## 🐈 処理フロー
-
-```mermaid
-%%{init:{'theme':'base','themeVariables':{'primaryColor':'#024959','primaryTextColor':'#F2C335','primaryBorderColor':'#F2AE30','lineColor':'#A1A2A6','secondaryColor':'#593E25','tertiaryColor':'#F2C335','noteTextColor':'#024959','noteBkgColor':'#F2C335','textColor':'#024959','fontSize':'18px'}}}%%
-
-graph LR
-    A[開始] --> B[リポジトリの構想とネーミング]
-    B -->|人間が実施| C[HarmonAI IIIによる<br>リポジトリ初期化]
-    C -->|自動化| D[開発作業]
-    D -->|人間が実施| E[AIRAによる<br>コミット自動化]
-    E --> H[IRISによる<br>リリースノート作成]
-    H --> I[IRISによる<br>ドキュメント翻訳]
-    I --> J[リリース]
-    J --> K[終了]
-
-    class B,D,G human;
-    class E aira;
-    class F,H,I iris;
-    class C auto;
-    class A,J,K process;
+```bash
+git clone https://github.com/yourusername/header-creator.git
+cd header-creator
 ```
 
-## 🤝 コントリビューション
+2. 仮想環境を作成し、アクティベートします：
 
-HarmonAI IIIは、オープンソースプロジェクトとしてコミュニティからの貢献を歓迎しています。バグ報告、機能リクエスト、プルリクエストを通じて、このテンプレートリポジトリの改善にご協力ください。
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate  # Windows
+```
+
+3. 開発用の依存関係をインストールします：
+
+```bash
+pip install -r requirements.txt
+```
+
+4. テストを実行します：
+
+```bash
+pytest
+```
 
 ## 📄 ライセンス
 
-HarmonAI IIIは、[MITライセンス](LICENSE)の下で公開されています。
+このプロジェクトは MIT ライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。
+
+## 🤝 貢献
+
+バグ報告、機能リクエスト、プルリクエストを歓迎します。大きな変更を加える前に、まずイシューを開いて変更内容について議論してください。
 
 ## 🙏 謝辞
 
-HarmonAI IIIの開発にあたり、多くのオープンソースプロジェクトからインスピレーションを得ています。特に、AIRAとIRISの開発者の皆様に深く感謝申し上げます。iris-s-coon、Maki様にも感謝いたします。
-
----
-
-HarmonAI IIIは、AI駆動の開発プロセスを実現する優れたスターターキットです。このテンプレートを基に、革新的なAIプロジェクトの開発を始めましょう！
+このプロジェクトは [Ideogram API](https://ideogram.ai/) を使用しています。
