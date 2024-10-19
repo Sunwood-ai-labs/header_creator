@@ -11,14 +11,14 @@ license: mit
 ---
 
 <div align="center">
-  <img src="https://via.placeholder.com/600x200.png?text=Header+Creator" alt="Header Creator Logo">
+  <img src="docs/header-creator.png" alt="Header Creator Logo">
 
 # Header Creator
 
 <p align="center">
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
-  <a href="https://github.com/yourusername/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yourusername/header-creator.svg" alt="License"></a>
+  <a href="https://github.com/Sunwood-ai-labs/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header-creator.svg" alt="License"></a>
 </p>
 
 <p align="center">
@@ -83,19 +83,19 @@ header-creator --prompt "A stunning tropical paradise header image" --input path
 
 ## ⚙️ Configuration
 
-You can change the following default settings in the `config.py` file:
+The following default settings can be changed in the `config.py` file:
 
 - `DEFAULT_MODEL`: The Ideogram model to use
 - `DEFAULT_MAGIC_PROMPT`: Magic prompt options
-- `DEFAULT_ASPECT_RATIO`: Aspect ratio of the generated image
-- `DEFAULT_STYLE_TYPE`: Style type of the generated image
+- `DEFAULT_ASPECT_RATIO`: The aspect ratio of the generated image
+- `DEFAULT_STYLE_TYPE`: The style type of the generated image
 
 ## 👨‍💻 Development
 
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/header-creator.git
+git clone https://github.com/Sunwood-ai-labs/header-creator.git
 cd header-creator
 ```
 
@@ -121,11 +121,11 @@ pytest
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
-Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss changes before making large modifications.
+Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss any significant changes before making them.
 
 ## 🙏 Acknowledgements
 
