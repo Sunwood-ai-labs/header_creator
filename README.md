@@ -19,6 +19,8 @@ license: mit
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
   <a href="https://github.com/Sunwood-ai-labs/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header-creator.svg" alt="License"></a>
+  <a href="https://github.com/Sunwood-ai-labs/header-creator"><img src="https://img.shields.io/github/stars/Sunwood-ai-labs/header-creator.svg?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/Sunwood-ai-labs/header-creator/issues"><img src="https://img.shields.io/github/issues/Sunwood-ai-labs/header-creator.svg" alt="GitHub issues"></a>
 </p>
 
 <p align="center">
@@ -31,6 +33,7 @@ license: mit
   <img src="https://img.shields.io/badge/Requests-2CA5E0?style=for-the-badge&logo=python&logoColor=white" alt="Requests">
   <img src="https://img.shields.io/badge/Loguru-000000?style=for-the-badge&logo=python&logoColor=white" alt="Loguru">
   <img src="https://img.shields.io/badge/Ideogram-FF6B6B?style=for-the-badge&logo=image&logoColor=white" alt="Ideogram">
+  <img src="https://img.shields.io/badge/pic--to--header-4B0082?style=for-the-badge&logo=image&logoColor=white" alt="pic-to-header">
 </p>
 
 </div>
