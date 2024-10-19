@@ -24,7 +24,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.1.1 がリリースされました。</b>
+  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.2.0 がリリースされました。</b>
 </p>
 
 <p align="center">
@@ -40,17 +40,20 @@ license: mit
 
 ## 🚀 プロジェクト概要
 
-Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とPythonスクリプトからの両方で利用可能です。バージョン 0.1.1では、READMEファイルのロゴ画像パスを絶対パスに変更し、READMEファイルの英語と日本語バージョンを更新しました。これにより、GitHub Pagesなどからの表示が改善されます。
+Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とStreamlitアプリの両方から利用可能です。  バージョン 0.2.0では、Streamlitアプリによるユーザーインターフェースが追加されました。
 
 
 ## ✨ 主な機能
 
 - Ideogram API を使用したヘッダー画像生成
-- コマンドラインインターフェース (CLI) とPythonスクリプトからの利用
+- コマンドラインインターフェース (CLI) とStreamlitアプリからの利用
 - 設定ファイル(`config.py`)によるカスタマイズ
+- StreamlitアプリによるAPIキー管理、プロンプト入力、マスク画像アップロード、パラメータ設定
 
 
 ## 🔧 使用方法
+
+Streamlitアプリを使用することで、GUIから簡単にヘッダー画像を生成できます。詳細はStreamlitアプリをご確認ください。
 
 ### Python スクリプトから使用する場合
 
@@ -61,7 +64,8 @@ result = create_header(
     prompt="A stunning tropical paradise header image",
     input_image_path="path/to/input.png",
     mask_image_path="path/to/mask.png",
-    output_image_path="path/to/output.png"
+    output_image_path="path/to/output.png",
+    api_key="YOUR_API_KEY" # または環境変数 IDEOGRAM_API_KEY
 )
 
 if result:
@@ -73,8 +77,9 @@ else:
 ### コマンドラインから使用する場合
 
 ```bash
-header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png
+header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png --api-key YOUR_API_KEY # または環境変数 IDEOGRAM_API_KEY
 ```
+
 
 ## 📦 インストール手順
 
@@ -91,10 +96,11 @@ pip install header-creator
 
 `config.py` ファイルで以下のデフォルト設定を変更できます：
 
-- `DEFAULT_MODEL`: 使用する Ideogram モデル
-- `DEFAULT_MAGIC_PROMPT`: マジックプロンプトオプション
-- `DEFAULT_ASPECT_RATIO`: 生成する画像のアスペクト比
-- `DEFAULT_STYLE_TYPE`: 生成する画像のスタイルタイプ
+- `DEFAULT_MODEL`: 使用する Ideogram モデル (デフォルト: `V_2_TURBO`)
+- `DEFAULT_MAGIC_PROMPT`: マジックプロンプトオプション (デフォルト: `ON`)
+- `DEFAULT_ASPECT_RATIO`: 生成する画像のアスペクト比 (デフォルト: `ASPECT_16_9`)
+- `DEFAULT_STYLE_TYPE`: 生成する画像のスタイルタイプ (デフォルト: `RENDER_3D`)
+
 
 ## 📄 ライセンス
 
