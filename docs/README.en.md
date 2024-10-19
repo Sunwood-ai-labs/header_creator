@@ -11,7 +11,7 @@ license: mit
 ---
 
 <div align="center">
-  <img src="docs/header-creator.png" alt="Header Creator Logo">
+  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/header_creator/refs/heads/main/docs/header-creator.png" alt="Header Creator Logo">
 
 # Header Creator
 
@@ -37,13 +37,13 @@ license: mit
 
 ## 🚀 Project Overview
 
-Header Creator is a Python package that uses the Ideogram API to generate header images. It can be used both from a command-line interface (CLI) and from Python scripts.
+Header Creator is a Python package that generates header images using the Ideogram API. It can be used both from a command-line interface (CLI) and from Python scripts.
 
 
 ## ✨ Key Features
 
 - Header image generation using the Ideogram API
-- Usable from both the command-line interface (CLI) and Python scripts
+- Usable from both a command-line interface (CLI) and Python scripts
 - Customization via a configuration file (`config.py`)
 
 
@@ -86,7 +86,7 @@ pip install header-creator
 
 ## ⚙️ Configuration
 
-The following default settings can be changed in the `config.py` file:
+The following default settings can be modified in the `config.py` file:
 
 - `DEFAULT_MODEL`: The Ideogram model to use
 - `DEFAULT_MAGIC_PROMPT`: Magic prompt options
@@ -99,7 +99,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🤝 Contributing
 
-Bug reports, feature requests, and pull requests are welcome. Please open an issue to discuss changes before making large modifications.
+Bug reports, feature requests, and pull requests are welcome. Please open an issue to discuss changes before making large contributions.
 
 ## 🙏 Acknowledgements
 
