@@ -24,7 +24,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.1 has been released.</b>
+  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.2 has been released.</b>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ license: mit
 
 ## 🚀 Project Overview
 
-Header Creator is a Python package that generates header images using the Ideogram API. It's usable from both a command-line interface (CLI) and a Streamlit app.  Version 0.2.1 adds a Streamlit app user interface and changes the repository name from "HarmonAI III" to "Header Creator".
+Header Creator is a Python package that generates header images using the Ideogram API. It can be used from both a command-line interface (CLI) and a Streamlit app. Version 0.2.2 adds theme settings to the Streamlit app and improves UI/UX.
 
 
 ## ✨ Key Features
@@ -49,14 +49,16 @@ Header Creator is a Python package that generates header images using the Ideogr
 - Usable from both a command-line interface (CLI) and a Streamlit app
 - Customization via a configuration file (`config.py`)
 - API key management, prompt input, mask image upload, and parameter settings via the Streamlit app
+- Header image download function (from v0.2.2)
+- Spinner display during generation process (from v0.2.2)
 
 
 ## 🔧 Usage
 
-The Streamlit app provides an easy-to-use GUI for generating header images. Run `app.py` to start the Streamlit app.
+You can easily generate header images via a GUI using the Streamlit app. Run `app.py` to start the Streamlit app.
 
 
-### Using from a Python script:
+### Using from a Python script
 
 ```python
 from header_creator import create_header
@@ -72,10 +74,10 @@ result = create_header(
 if result:
     print(f"Header image generated: {result}")
 else:
-    print("Header image generation failed")
+    print("Failed to generate header image")
 ```
 
-### Using from the command line:
+### Using from the command line
 
 ```bash
 header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png --api-key YOUR_API_KEY # or environment variable IDEOGRAM_API_KEY
@@ -95,12 +97,16 @@ pip install header-creator
 
 ## ⚙️ Configuration
 
-The following default settings can be changed in the `config.py` file:
+You can change the following default settings in the `config.py` file:
 
 - `DEFAULT_MODEL`: The Ideogram model to use (default: `V_2_TURBO`)
 - `DEFAULT_MAGIC_PROMPT`: Magic prompt option (default: `ON`)
 - `DEFAULT_ASPECT_RATIO`: Aspect ratio of the generated image (default: `ASPECT_16_9`)
 - `DEFAULT_STYLE_TYPE`: Style type of the generated image (default: `RENDER_3D`)
+
+## 🆕 What's New
+
+- **v0.2.2:** Added theme settings to the Streamlit app, improved UI/UX, added header image download function, added spinner display during generation process.
 
 
 ## 📄 License
@@ -109,8 +115,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🤝 Contributing
 
-Bug reports, feature requests, and pull requests are welcome. Please open an issue to discuss changes before making large modifications.
+Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss changes before making large modifications.
 
 ## 🙏 Acknowledgements
 
-This project uses the [Ideogram API](https://ideogram.ai/). Thanks to iris-s-coon and Maki.
+This project uses the [Ideogram API](https://ideogram.ai/).  Thanks to iris-s-coon and Maki.
