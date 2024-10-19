@@ -11,7 +11,7 @@ license: mit
 ---
 
 <div align="center">
-  <img src="docs/header-creator.png" alt="Header Creator Logo">
+  <img src="https://raw.githubusercontent.com/Sunwood-ai-labs/header_creator/refs/heads/main/docs/header-creator.png" alt="Header Creator Logo">
 
 # Header Creator
 
@@ -22,7 +22,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API.</b>
+  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.1.0 has been released.</b>
 </p>
 
 <p align="center">
@@ -35,27 +35,19 @@ license: mit
 
 </div>
 
-## 🚀 Features
+## 🚀 Project Overview
 
-- Image generation using the Ideogram API
-- Processing and saving of generated images
-- Command-line interface (CLI) support
+Header Creator is a Python package that generates header images using the Ideogram API. It can be used both from a command-line interface (CLI) and from Python scripts.
 
-## 📦 Installation
 
-1. Install from PyPI:
+## ✨ Key Features
 
-```bash
-pip install header-creator
-```
+- Header image generation using the Ideogram API
+- Usable from both a command-line interface (CLI) and Python scripts
+- Customization via a configuration file (`config.py`)
 
-2. Create a `.env` file and set your Ideogram API key:
 
-```
-IDEOGRAM_API_KEY=your_ideogram_api_key_here
-```
-
-## 🛠 Usage
+## 🔧 Usage
 
 ### Using from a Python script
 
@@ -81,52 +73,34 @@ else:
 header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png
 ```
 
+## 📦 Installation
+
+1. Install from PyPI:
+
+```bash
+pip install header-creator
+```
+
+2. Create a `.env` file and set your Ideogram API key to `IDEOGRAM_API_KEY` (see `.env.example`).
+
+
 ## ⚙️ Configuration
 
-The following default settings can be changed in the `config.py` file:
+The following default settings can be modified in the `config.py` file:
 
 - `DEFAULT_MODEL`: The Ideogram model to use
 - `DEFAULT_MAGIC_PROMPT`: Magic prompt options
-- `DEFAULT_ASPECT_RATIO`: The aspect ratio of the generated image
-- `DEFAULT_STYLE_TYPE`: The style type of the generated image
-
-## 👨‍💻 Development
-
-1. Clone this repository:
-
-```bash
-git clone https://github.com/Sunwood-ai-labs/header-creator.git
-cd header-creator
-```
-
-2. Create and activate a virtual environment:
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate  # Windows
-```
-
-3. Install development dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Run tests:
-
-```bash
-pytest
-```
+- `DEFAULT_ASPECT_RATIO`: Aspect ratio of the generated image
+- `DEFAULT_STYLE_TYPE`: Style type of the generated image
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
-Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss any significant changes before making them.
+Bug reports, feature requests, and pull requests are welcome. Please open an issue to discuss changes before making large contributions.
 
 ## 🙏 Acknowledgements
 
-This project utilizes the [Ideogram API](https://ideogram.ai/).
+This project uses the [Ideogram API](https://ideogram.ai/).  Thanks to iris-s-coon and Maki.
