@@ -24,7 +24,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.1.1 has been released.</b>
+  <b>Header Creator is a Python package for generating and processing header images using the Ideogram API. Version 0.2.0 has been released.</b>
 </p>
 
 <p align="center">
@@ -40,17 +40,20 @@ license: mit
 
 ## 🚀 Project Overview
 
-Header Creator is a Python package that generates header images using the Ideogram API. It can be used both from a command-line interface (CLI) and from Python scripts.  Version 0.1.1 includes updates to the README (English and Japanese versions) and changes the logo image path in the README to an absolute path for improved display on GitHub Pages and similar services.
+Header Creator is a Python package that generates header images using the Ideogram API. It's usable from both a command-line interface (CLI) and a Streamlit app. Version 0.2.0 adds a user interface via a Streamlit app.
 
 
 ## ✨ Key Features
 
 - Header image generation using the Ideogram API
-- Usable from both a command-line interface (CLI) and Python scripts
+- Usable from both a command-line interface (CLI) and a Streamlit app
 - Customization via a configuration file (`config.py`)
+- API key management, prompt input, mask image upload, and parameter settings via the Streamlit app
 
 
 ## 🔧 Usage
+
+You can easily generate header images via a GUI using the Streamlit app.  See the Streamlit app for details.
 
 ### Using from a Python script
 
@@ -61,7 +64,8 @@ result = create_header(
     prompt="A stunning tropical paradise header image",
     input_image_path="path/to/input.png",
     mask_image_path="path/to/mask.png",
-    output_image_path="path/to/output.png"
+    output_image_path="path/to/output.png",
+    api_key="YOUR_API_KEY" # or environment variable IDEOGRAM_API_KEY
 )
 
 if result:
@@ -73,8 +77,9 @@ else:
 ### Using from the command line
 
 ```bash
-header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png
+header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png --api-key YOUR_API_KEY # or environment variable IDEOGRAM_API_KEY
 ```
+
 
 ## 📦 Installation
 
@@ -84,17 +89,18 @@ header-creator --prompt "A stunning tropical paradise header image" --input path
 pip install header-creator
 ```
 
-2. Create a `.env` file and set your Ideogram API key to the `IDEOGRAM_API_KEY` variable (see `.env.example`).
+2. Create a `.env` file and set your Ideogram API key to `IDEOGRAM_API_KEY` (see `.env.example`).
 
 
 ## ⚙️ Configuration
 
-The following default settings can be modified in the `config.py` file:
+You can modify the following default settings in the `config.py` file:
 
-- `DEFAULT_MODEL`: The Ideogram model to use
-- `DEFAULT_MAGIC_PROMPT`: Magic prompt options
-- `DEFAULT_ASPECT_RATIO`: The aspect ratio of the generated image
-- `DEFAULT_STYLE_TYPE`: The style type of the generated image
+- `DEFAULT_MODEL`: The Ideogram model to use (default: `V_2_TURBO`)
+- `DEFAULT_MAGIC_PROMPT`: Magic prompt option (default: `ON`)
+- `DEFAULT_ASPECT_RATIO`: Aspect ratio of the generated image (default: `ASPECT_16_9`)
+- `DEFAULT_STYLE_TYPE`: Style type of the generated image (default: `RENDER_3D`)
+
 
 ## 📄 License
 
@@ -102,8 +108,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🤝 Contributing
 
-Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss changes before making large contributions.
+Bug reports, feature requests, and pull requests are welcome.  Please open an issue to discuss changes before making large modifications.
 
 ## 🙏 Acknowledgements
 
-This project uses the [Ideogram API](https://ideogram.ai/). Thanks to iris-s-coon and Maki.
+This project uses the [Ideogram API](https://ideogram.ai/).  Thanks to iris-s-coon and Maki.
