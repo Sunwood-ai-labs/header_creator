@@ -22,7 +22,7 @@ license: mit
 </p>
 
 <p align="center">
-  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。</b>
+  <b>Header Creator は、Ideogram API を使用してヘッダー画像を生成し、処理するための Python パッケージです。バージョン 0.1.0 がリリースされました。</b>
 </p>
 
 <p align="center">
@@ -35,27 +35,19 @@ license: mit
 
 </div>
 
-## 🚀 機能
+## 🚀 プロジェクト概要
 
-- Ideogram API を使用した画像生成
-- 生成された画像の処理と保存
-- コマンドラインインターフェース (CLI) のサポート
+Header Creatorは、Ideogram APIを用いてヘッダー画像を生成するPythonパッケージです。コマンドラインインターフェース(CLI)とPythonスクリプトからの両方で利用可能です。
 
-## 📦 インストール
 
-1. PyPI からインストールします：
+## ✨ 主な機能
 
-```bash
-pip install header-creator
-```
+- Ideogram API を使用したヘッダー画像生成
+- コマンドラインインターフェース (CLI) とPythonスクリプトからの利用
+- 設定ファイル(`config.py`)によるカスタマイズ
 
-2. `.env` ファイルを作成し、Ideogram API キーを設定します：
 
-```
-IDEOGRAM_API_KEY=your_ideogram_api_key_here
-```
-
-## 🛠 使用方法
+## 🔧 使用方法
 
 ### Python スクリプトから使用する場合
 
@@ -81,6 +73,17 @@ else:
 header-creator --prompt "A stunning tropical paradise header image" --input path/to/input.png --mask path/to/mask.png --output path/to/output.png
 ```
 
+## 📦 インストール手順
+
+1. PyPI からインストールします：
+
+```bash
+pip install header-creator
+```
+
+2. `.env` ファイルを作成し、`IDEOGRAM_API_KEY` にIdeogram APIキーを設定します (`.env.example`を参照)。
+
+
 ## ⚙️ 設定
 
 `config.py` ファイルで以下のデフォルト設定を変更できます：
@@ -89,35 +92,6 @@ header-creator --prompt "A stunning tropical paradise header image" --input path
 - `DEFAULT_MAGIC_PROMPT`: マジックプロンプトオプション
 - `DEFAULT_ASPECT_RATIO`: 生成する画像のアスペクト比
 - `DEFAULT_STYLE_TYPE`: 生成する画像のスタイルタイプ
-
-## 👨‍💻 開発
-
-1. このリポジトリをクローンします：
-
-```bash
-git clone https://github.com/Sunwood-ai-labs/header-creator.git
-cd header-creator
-```
-
-2. 仮想環境を作成し、アクティベートします：
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate  # Windows
-```
-
-3. 開発用の依存関係をインストールします：
-
-```bash
-pip install -r requirements.txt
-```
-
-4. テストを実行します：
-
-```bash
-pytest
-```
 
 ## 📄 ライセンス
 
@@ -129,4 +103,4 @@ pytest
 
 ## 🙏 謝辞
 
-このプロジェクトは [Ideogram API](https://ideogram.ai/) を使用しています。
+このプロジェクトは [Ideogram API](https://ideogram.ai/) を使用しています。  iris-s-coon さんと Maki さんに感謝します。
