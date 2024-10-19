@@ -15,9 +15,13 @@ Use a color palette that combines deep blues, purples, and touches of cyan to cr
 
 Ensure that the "Header Creator" text is the largest and most prominent element in the image, instantly catching the viewer's attention when they visit the repository.
     """,
-    input_image_path="data/input.png",
+    input_image_path="data/input2.png",
     mask_image_path="data/mask.png",
-    output_image_path="data/output.png"
+    output_image_path="data/output2.png",
+    model="V_2_TURBO",
+    magic_prompt="ON",
+    aspect_ratio="ASPECT_16_9",
+    style_type="RENDER_3D"
 )
 
 if result:
