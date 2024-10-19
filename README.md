@@ -11,14 +11,14 @@ license: mit
 ---
 
 <div align="center">
-  <img src="https://via.placeholder.com/600x200.png?text=Header+Creator" alt="Header Creator Logo">
+  <img src="docs/header-creator.png" alt="Header Creator Logo">
 
 # Header Creator
 
 <p align="center">
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/v/header-creator.svg" alt="PyPI version"></a>
   <a href="https://pypi.org/project/header-creator/"><img src="https://img.shields.io/pypi/pyversions/header-creator.svg" alt="Python versions"></a>
-  <a href="https://github.com/yourusername/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yourusername/header-creator.svg" alt="License"></a>
+  <a href="https://github.com/Sunwood-ai-labs/header-creator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Sunwood-ai-labs/header-creator.svg" alt="License"></a>
 </p>
 
 <p align="center">
@@ -95,7 +95,7 @@ header-creator --prompt "A stunning tropical paradise header image" --input path
 1. このリポジトリをクローンします：
 
 ```bash
-git clone https://github.com/yourusername/header-creator.git
+git clone https://github.com/Sunwood-ai-labs/header-creator.git
 cd header-creator
 ```
 
