@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="header-creator",
-    version="0.1.0",
+    version="0.2.1",
     author="Sunwood-ai-labs",
     author_email="your.email@example.com",
     description="A package to create header images using Ideogram API",
