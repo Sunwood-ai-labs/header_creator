@@ -3,10 +3,16 @@ import json
 from loguru import logger
 from .config import IDEOGRAM_API_KEY, DEFAULT_MODEL, DEFAULT_MAGIC_PROMPT, DEFAULT_ASPECT_RATIO, DEFAULT_STYLE_TYPE
 
-def generate_image(prompt, model=DEFAULT_MODEL, magic_prompt_option=DEFAULT_MAGIC_PROMPT, 
-                   aspect_ratio=DEFAULT_ASPECT_RATIO, style_type=DEFAULT_STYLE_TYPE):
+def generate_image(prompt, model=None, magic_prompt_option=None, 
+                   aspect_ratio=None, style_type=None):
     url = "https://api.ideogram.ai/generate"
     
+    # デフォルト値の設定
+    model = model or DEFAULT_MODEL
+    magic_prompt_option = magic_prompt_option or DEFAULT_MAGIC_PROMPT
+    aspect_ratio = aspect_ratio or DEFAULT_ASPECT_RATIO
+    style_type = style_type or DEFAULT_STYLE_TYPE
+
     payload = {
         "image_request": {
             "model": model,
