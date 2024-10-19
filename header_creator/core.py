@@ -16,7 +16,7 @@ def create_header(prompt, input_image_path, mask_image_path, output_image_path):
         logger.info(json.dumps(result, indent=2, ensure_ascii=False))
         
         # 生成された画像のURLを取得
-        generated_image_url = result.get("image_url", "")
+        generated_image_url = result.get("data", [{}])[0].get("url", "")
         
         if generated_image_url:
             # 生成された画像をダウンロード
